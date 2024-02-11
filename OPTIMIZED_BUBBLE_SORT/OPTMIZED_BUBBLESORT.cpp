@@ -64,6 +64,7 @@ int main()
     std::cout << "Sorted array:\n";
     printArray(arr, N);
 
+
     //Returning 0 to indicate successful execution of the program
     return 0;
 }
