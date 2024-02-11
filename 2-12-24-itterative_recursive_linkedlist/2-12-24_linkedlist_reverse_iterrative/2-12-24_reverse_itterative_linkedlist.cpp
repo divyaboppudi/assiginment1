@@ -1,11 +1,11 @@
-#include <iostream>
+#include <iostream>  //This line includes the input/output stream library which allows input and output operations.
 
 struct Node {
     int data;
     Node* next;
 
     Node(int val) : data(val), next(nullptr) {}
-};
+};  //This declares a struct named Node which represents a node in a linked list. It contains an integer data and a pointer next to the next node in the list. It also defines a constructor to initialize the data and next pointer of a node.
 
 Node* reverseLinkedListIterative(Node* head) {
     Node* prev = nullptr;
@@ -21,7 +21,7 @@ Node* reverseLinkedListIterative(Node* head) {
         prev = current;
         current = next;
     }
-
+//This function reverseLinkedListIterative reverses a linked list iteratively. It takes a pointer to the head of the list as input. It initializes three pointers: prev to keep track of the previous node, current to traverse the list, and next to store the next node in the list. It iterates through the list, reversing the links of each node. Finally, it returns the new head of the reversed list.
     // After the loop, 'prev' will be pointing to the new head of the reversed list
     return prev;
 }
@@ -34,7 +34,7 @@ void printLinkedList(Node* head) {
     }
     std::cout << std::endl;
 }
-
+//This function printLinkedList prints the elements of a linked list. It takes a pointer to the head of the list as input. It traverses the list using a while loop, printing the data of each node. After printing all elements, it adds a newline character to the output.
 int main() {
     // Create a linked list
     Node* head = new Node(1);
@@ -55,4 +55,4 @@ int main() {
     return 0;
 }
 
-//chnages1
+//This is the main function of the program. It creates a linked list with five nodes, each containing values 1 through 5. It then prints the original linked list using the printLinkedList function. After that, it reverses the linked list iteratively using the reverseLinkedListIterative function and prints the reversed linked list. Finally, it returns 0, indicating successful execution of the program.
